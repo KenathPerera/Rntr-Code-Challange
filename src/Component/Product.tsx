@@ -186,11 +186,11 @@ function Product() {
                     </Grid>
                     <Grid item xs={6} className={classes.gridBoarder}>
                         <Grid item xs={12} spacing={2}>
-                            <Box sx={{ width: '100%', maxWidth: 500 }}>
-                                <Typography variant="h3" component="div" gutterBottom align="left" color="primary">
+                            <Box pt={3}>
+                                <Typography variant="h3" component="div" gutterBottom  color="primary">
                                     {title}
                                 </Typography>
-                                <Typography variant="body1" gutterBottom align="left" color="secondary">
+                                <Typography variant="body1" gutterBottom  color="secondary">
                                     {description}
                                 </Typography>
                             </Box>
@@ -231,7 +231,7 @@ function Product() {
                                 </Button>
                                 <Link to={`/`}>
                                     <Button variant="contained" className={classes.button2} color="primary">
-                                        See All Product
+                                        See All Products
                                     </Button>
                                 </Link>
 
