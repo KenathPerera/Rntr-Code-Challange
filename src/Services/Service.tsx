@@ -12,7 +12,6 @@ class Service {
 
 
     retriveSkuData(id: any) {
-        console.log(`${COURSE_API_URL}/skus/${id}/availability/distribution`)
         return axios.get(`${COURSE_API_URL}/skus/${id}/availability/distribution`);
     }
 

@@ -84,7 +84,7 @@ function Product() {
     const [holiday, setHoliday] = React.useState<Date[]>([]);
     const [images, setImages] = useState<any[]>([]);
     const [visible, setVisible] = useState(true);
-    const [visibleAlert, setVisibleAlert] = useState(true);
+    const [priceDays, setpriceDays] = useState(true);
 
     {/*const [date, setDate] = useState<Date | null>(new Date());*/ }
     const [startDate, setStartDate] = useState<Date | null>(new Date());
@@ -160,9 +160,10 @@ function Product() {
 
 
 
-    function onPrice(price: any) {
+    function onPrice(price: any,days : any) {
         setVisible(false);
         setPrice(price)
+        setpriceDays(days)
     }
 
 
@@ -202,14 +203,14 @@ function Product() {
                             <Box pt={3}>
                                 {
                                     days.map((st: { price: any; value: any; }) => (
-                                        <Button onClick={() => onPrice(st.price)} variant="outlined" className={classes.button}>
+                                        <Button onClick={() => onPrice(st.price,st.value)} variant="outlined" className={classes.button}>
                                             {st.value} days
                                         </Button>
 
                                     ))
                                 }
                                 <Typography variant="h6" component="div" gutterBottom hidden={visible} className={classes.priceColor}>
-                                    Price A$ {price}
+                                    Price for {priceDays} Days : A$ {price}
                                 </Typography>
 
                             </Box>
@@ -229,7 +230,7 @@ function Product() {
                         <Grid item xs={12}>
 
                             <Box pt={3}>
-                                <Button disabled={true} variant="outlined" className={classes.button2} color="primary" onClick={() => setVisibleAlert(false)}>
+                                <Button disabled={true} variant="outlined" className={classes.button2} color="primary" >
                                     Rent With Rntr
                                 </Button>
                                 <Link to={`/`}>

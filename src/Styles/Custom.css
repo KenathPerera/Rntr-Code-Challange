@@ -1,3 +1,5 @@
+/* Css Class For implemet custom style/change inline css*/
+
 .react-datepicker__day--disabled,
 .react-datepicker__month-text--disabled,
 .react-datepicker__quarter-text--disabled,
@@ -14,9 +16,6 @@
 .react-datepicker__navigation {
   background: green !important;
 }
-
-
-
 
 .ui.card,
 .ui.cards>.card {
