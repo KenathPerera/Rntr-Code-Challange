@@ -13,7 +13,9 @@ function Home() {
       (response: { data: { [x: string]: any; }; }) => {
         setImage('https://app.getrntr.com/api/media/' + response.data.product['images'][0])
       }
-    )
+    ).catch(error => {
+      console.log(error.response.data.error)
+   })
 
   return (
     <div>

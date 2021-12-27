@@ -124,7 +124,9 @@ function Product() {
 
                     }
 
-                )
+                ).catch(error => {
+                    console.log(error.response.data.error)
+                 })
         }
 
     }, []);
@@ -152,7 +154,9 @@ function Product() {
                         }
                     }
                 }
-            )
+            ).catch(error => {
+                console.log(error.response.data.error)
+             })
 
     }
 
