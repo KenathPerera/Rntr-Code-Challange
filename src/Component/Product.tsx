@@ -96,7 +96,6 @@ function Product() {
 
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
-        // Update the document title using the browser API
         if (!isLoaded) {
             Service.retrieveAllProducts()
                 .then(
@@ -165,8 +164,6 @@ function Product() {
         setpriceDays(days)
     }
 
-
-    //holiday.push(new Date('2021-12-28'))
 
     return (
         <div>
