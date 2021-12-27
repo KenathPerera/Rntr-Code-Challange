@@ -44,7 +44,6 @@ const useStyles = makeStyles({
         display: "none"
     },
     gridBoarder:{
-        border: "1px solid grey",
         padding:'10px'
     },
     priceColor:{
