@@ -85,6 +85,7 @@ function Product() {
     const [visible, setVisible] = useState(true);
     const [priceDays, setpriceDays] = useState(true);
 
+    
     {/*const [date, setDate] = useState<Date | null>(new Date());*/ }
     const [startDate, setStartDate] = useState<Date | null>(new Date());
     const [endDate, setEndDate] = useState(null);
@@ -94,13 +95,16 @@ function Product() {
         setEndDate(end);
     };
 
+    console.log(strId)
+    console.log(endDate)
+
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         if (!isLoaded) {
             Service.retrieveAllProducts()
                 .then(
                     (response: { data: { [x: string]: any; }; }) => {
-                        var lengthPrice = Object.keys(response.data.SKUs[0]['pricing']).length
+                        //var lengthPrice = Object.keys(response.data.SKUs[0]['pricing']).length
                         var lengthImage = Object.keys(response.data.product['images']).length
                         var lengthSku = Object.keys(response.data.product['images']).length
 
@@ -137,7 +141,7 @@ function Product() {
                 response => {
                     var length2 = Object.keys(response.data).length
                     for (var i = 0; i < length2; i++) {
-                        if (response.data[i]['status'] != 'available') {
+                        if (response.data[i]['status'] !== 'available') {
                             let date2: any = '';
                             if (response.data[i]['dateFrom'] != null && response.data[i]['dateTo'] != null) {
                                 //get dates between date range
@@ -183,6 +187,7 @@ function Product() {
                                         src={item}
                                         loading="lazy"
                                         className="img-width"
+                                        alt=""
                                     />
                                 ))
                             }

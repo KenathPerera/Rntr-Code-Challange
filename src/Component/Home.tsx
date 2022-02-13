@@ -27,6 +27,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
@@ -36,6 +37,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
@@ -45,6 +47,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
@@ -54,6 +57,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
@@ -63,6 +67,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
@@ -72,6 +77,7 @@ function Home() {
                 src={image}
                 loading="lazy"
                 className="img-width"
+                alt=""
               />
             </Link>
           </ImageListItem>
