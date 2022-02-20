@@ -240,7 +240,7 @@ function Product() {
                                 </Button>
                                 <Link to={`/`}>
                                     <Button variant="contained" className={classes.button2} color="primary">
-                                        See All Productss
+                                        Go Back
                                     </Button>
                                 </Link>
 
